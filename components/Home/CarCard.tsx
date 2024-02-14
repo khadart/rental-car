@@ -5,7 +5,6 @@ import { MdAirlineSeatReclineNormal } from "react-icons/md";
 import { PiSteeringWheelFill } from "react-icons/pi";
 
 function CarCard(props: any) {
-    console.log("ccc",props)
   const [car, setCar] = useState(props.car);
   useEffect (()=>{
     if(props.car){
@@ -16,11 +15,11 @@ function CarCard(props: any) {
     <div className="group  bg-gray-100 p-2 w-[250px]  sm:p-1 rounded-2xl m-1 sm:m-2   
      hover:bg-white hover:border-[1px] 
     cursor-pointer duration-100 border-blue-500">
-      <h2 className="text-[20px] font-medium mb-3">{car?.name}</h2>
-      <h2 className="text-[28px] font-bold mb-2">
-        <span className="text-[15px] font-light">$</span>
+      <h2 className="text-[20px] font-medium mb-3  text-gray-900 ">{car?.name}</h2>
+      <h2 className="text-[28px] font-bold mb-2  text-gray-900 ">
+        <span className="text-[15px] font-bold  text-gray-900 ">$</span>
         {car?.price}
-        <span className="text-[15px] font-light">/day</span>
+        <span className="text-[15px] font-light  text-gray-900 ">/day</span>
         <Image
           src={car?.image?.url}
           alt={car?.name}
@@ -29,17 +28,17 @@ function CarCard(props: any) {
           className="w-[200px] h-[150px] mb-3 object-contain"
         />
         <div className="flex justify-around  group-hover:hidden">
-          <div className="text-center text-gray-500">
+          <div className="text-center text-gray-900">
             <PiSteeringWheelFill className="w-full text-[22px] mb-2" />
             <h2 className="line-clamp-5 text-[14px] font-light">{car?.carType}</h2>
           </div>
-          <div className="text-center text-gray-500">
+          <div className="text-center text-gray-900">
             <MdAirlineSeatReclineNormal className="w-full text-[22px] mb-2" />
             <h2 className="line-clamp-5 text-[14px] font-light">
               {car?.seat} Seat
             </h2>
           </div>
-          <div className="text-center text-gray-500">
+          <div className="text-center text-gray-900">
             <FaGasPump className="w-full text-[22px] mb-2" />
             <h2 className="line-clamp-5 text-[14px] font-light">
               {car?.carAvg} MPG
