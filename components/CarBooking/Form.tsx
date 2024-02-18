@@ -1,6 +1,5 @@
 import { BookCreateFlagContext } from "@/context/BookCreateFlagContext";
 import {  createCarBooking, getStoreLocations } from "@/services";
-import { Console } from "console";
 import React, { useContext, useEffect, useState } from "react";
 
 function Form({car}:any) {
